@@ -1,0 +1,91 @@
+#!/usr/bin/env sh
+
+### Load scripting addition ###
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+## Settings ###
+# External bar
+yabai -m config external_bar all:25:0
+
+# Global settings
+yabai -m config window_shadow float
+yabai -m config window_opacity on
+yabai -m config window_opacity_duration 0.05
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.9
+yabai -m config split_ratio 0.50
+yabai -m config auto_balance off
+yabai -m config window_shadow off
+yabai -m config window_animation_duration 0.1
+
+yabai -m window --toggle border
+yabai -m rule --add app=Terminal border=off
+
+# Mouse settings
+yabai -m config mouse_follows_focus on
+yabai -m config focus_follows_mouse autoraise
+yabai -m config mouse_modifier fn
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m config mouse_drop_action swap
+
+# General space settings
+yabai -m config window_placement second_child
+yabai -m config window_topmost on
+yabai -m config layout bsp
+yabai -m config top_padding 05
+yabai -m config bottom_padding 05
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 7
+
+# set mouse interaction modifier key (default: fn)
+yabai -m config mouse_modifier fn
+
+# set modifier + left-click drag to move window (default: move)
+yabai -m config mouse_action1 move
+
+# set modifier + right-click drag to resize window (default: resize)
+yabai -m config mouse_action2 resize
+### Rules ###
+yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
+yabai -m rule --add app="^Raycast Settings$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^1Password$" manage=off
+yabai -m rule --add app="^Gestimer$" manage=off
+yabai -m rule --add app="^Walter's Currency Converter$" manage=off
+yabai -m rule --add app="^Rize$" title="^Blocker$" manage=off
+yabai -m rule --add app="^Mail$" manage=off
+yabai -m rule --add app="^Notes$" manage=off
+yabai -m rule --add app="^Finder$" manage=on
+yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Dictionary$" manage=off
+yabai -m rule --add title="^Software Update$" manage=off
+yabai -m rule --add app="System Information" title="About This Mac" manage=off
+yabai -m rule --add app="^KeyCaster$" manage=off
+yabai -m rule --add app="^IINA$" manage=off
+yabai -m rule --add app="^Shortcat$" manage=off
+yabai -m rule --add app="^(Calculator|System Preferences|Archieve Utilitiy)$" manage=off
+yabai -m rule --add label="mpv" app="^mpv$" manage=off
+yabai -m rule --add title='Settings$' manage=off
+yabai -m rule --add app="^Godot$" title='^Select a Node$' manage=off
+yabai -m rule --add app="^System Settings$" title=".*" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^System Information$" manage=off
+yabai -m rule --add title="^Preferences$" manage=off
+yabai -m rule --add title="^Digital Colour Meter$" manage=off
+yabai -m rule --add title="^General.*" manage=off
+yabai -m rule --add title="^Steam*" manage=off
+yabai -m rule --add app="^OBS Studio$" title="^Chat$" manage=off
+yabai -m rule --add app="^Stardew Valley$" manage=off
+yabai -m rule --add app="^LuLu$" manage=off
+# yabai -m rule --add app="^Godot$" manage=off
+
+yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq '.[1].id // .[0].jd' )"
+
+borders active_color=0xff81a1c1 inactive_color=0x002e3440 width=5.0 &
+
+echo "yabai configuration loaded.."
