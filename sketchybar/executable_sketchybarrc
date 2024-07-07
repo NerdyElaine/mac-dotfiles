@@ -81,9 +81,11 @@ sketchybar --add bracket spaces_br "${SPACES[@]}" \
 #
 
 ## Focused app name
-sketchybar --add item front_app center \
+sketchybar --add item front_app left \
   --set front_app script="$PLUGIN_DIR/front_app.sh" \
+  icon.padding_left=20 \
   icon.drawing=off \
+  label.font="$MONOSPACE_FONT:Regular:16.0" \
   --subscribe front_app front_app_switched
 #
 # Right items
