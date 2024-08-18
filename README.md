@@ -7,6 +7,7 @@ My Personal Dotfile >:3
 ![1st Image](assets/1st.png)
 ![2nd Image](assets/2nd.png)
 ![3rd Image](assets/3rd.png)
+![4th Image](assets/4th.png)
 
 ## Programs
 
@@ -17,7 +18,7 @@ My Personal Dotfile >:3
 | Hotkey Daemon    | [shkd](https://github.com/koekeishiya/skhd), [Karabiner Elements](https://github.com/pqrs-org/Karabiner-Elements) |
 | Terminal         | [Kitty](https://github.com/kovidgoyal/kitty), [tmux](https://github.com/tmux/tmux)                                |
 | Text Editor      | [Neovim](https://github.com/neovim/neovim)                                                                        |
-| File Explorer    | [Ranger](https://github.com/ranger/ranger)                                                                        |
+| File Explorer    | [Yazi](https://github.com/sxyazi/yazi)                                                                            |
 | Theme            | [Catppuccin](https://github.com/catppuccin)                                                                       |
 | Shell            | [Zsh](https://www.zsh.org/)                                                                                       |
 | Shell Extensions | [Zoxide](https://github.com/ajeetdsouza/zoxide), [Eza](https://github.com/eza-community/eza)                      |
