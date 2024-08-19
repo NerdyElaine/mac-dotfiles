@@ -21,4 +21,5 @@ My Personal Dotfile >:3
 | File Explorer    | [Yazi](https://github.com/sxyazi/yazi)                                                                            |
 | Theme            | [Catppuccin](https://github.com/catppuccin)                                                                       |
 | Shell            | [Zsh](https://www.zsh.org/)                                                                                       |
+| PDF Reader       | [Zathura](https://github.com/pwmt/zathura)                                                                        |
 | Shell Extensions | [Zoxide](https://github.com/ajeetdsouza/zoxide), [Eza](https://github.com/eza-community/eza)                      |
